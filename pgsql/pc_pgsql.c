@@ -99,7 +99,7 @@ void _PG_init(void);
 void
 _PG_init(void)
 {
-	elog(LOG, "Pointcloud (%s) module loaded", POINTCLOUD_VERSION);
+	elog(NOTICE, "Pointcloud (%s) module loaded", POINTCLOUD_VERSION);
 	pc_set_handlers(pgsql_alloc, pgsql_realloc,
 	                pgsql_free, pgsql_error,
 	                pgsql_info, pgsql_warn);
@@ -111,7 +111,7 @@ void _PG_fini(void);
 void
 _PG_fini(void)
 {
-	elog(LOG, "Pointcloud (%s) module unloaded", POINTCLOUD_VERSION);
+	elog(NOTICE, "Pointcloud (%s) module unloaded", POINTCLOUD_VERSION);
 }
 
 /* Mask pcid from bottom of typmod */
